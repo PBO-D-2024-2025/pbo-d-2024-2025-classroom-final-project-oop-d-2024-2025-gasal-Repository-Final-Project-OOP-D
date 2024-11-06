@@ -1,13 +1,14 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/4ZAJL3PP)
 # Laporan Akhir Final Project OOP D
 
 ## 1. Informasi Umum
 * **Nama Game**: [Nama Game]
 * **Anggota Kelompok**:
-    1. [Nama - NRP]
-    2. [Nama - NRP]
+    1. [Alvin Zanua Putra - 5025231064]
+    2. [Adrian Aziz Santoso - 5025221229]
     3. [Nama - NRP]
     4. [Nama - NRP]
-* **Tech Stack**: [Bahasa Pemrograman, Framework, Tools yang digunakan]
+* **Tech Stack**: [Bahasa Pemrograman, Framework]
 
 ## 2. Deskripsi Game
 
