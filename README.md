@@ -6,7 +6,7 @@
 * **Anggota Kelompok**:
     1. [Rahmad Bisma Zulfi Pahlevi - 5025231290]
     2. [Muhammad Abdul Rafi - 5025231093]
-    3. [Carmelo Yovan Gratito - 50252312]
+    3. [Carmelo Yovan Gratito - 5025231173]
 * **Tech Stack**: [Bahasa Pemrograman, Framework, Tools yang digunakan]
 
 ## 2. Deskripsi Game
