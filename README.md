@@ -10,17 +10,21 @@
 * **Tech Stack**: [Bahasa Pemrograman, Framework, Tools yang digunakan]
 
 ## 2. Deskripsi Game
+Inspirasi dari Game ROUNDS https://store.steampowered.com/app/1557740/ROUNDS/
 
 ### 2.1 Konsep Game
-* **Genre**: 
-* **Gameplay/Rule**: 
-* **Objective**: 
-* **Single/Multi Player**: 
+* **Genre**: Action, Shooter, Multiplayer, Arcade, Fighting
+* **Gameplay/Rule**: PvP, Against AI, Roguelite
+* **Objective**: Kill The Enemy
+* **Single/Multi Player**: Mungkin Keduanya
 
 ### 2.2 Fitur Utama
-1. [Fitur 1]
-2. [Fitur 2]
-3. [Fitur n]
+1. Item Customization
+2. 2 Player PvP
+3. Controller Support(kalo bisa)
+4. Character Cosmetics
+5. Limited Character Customization
+6. Character ability
 
 ## 3. Implementasi Fitur Wajib
 
