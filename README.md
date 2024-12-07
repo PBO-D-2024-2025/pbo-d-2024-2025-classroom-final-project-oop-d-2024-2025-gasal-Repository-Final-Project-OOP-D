@@ -23,8 +23,6 @@
 2. Simulation AI Vs AI
 3. Local Account System
 4. Extra Ingame Power-Up Items
-5. Limited Character Customization
-6. Character ability
 
 ## 3. Implementasi Fitur Wajib
 
