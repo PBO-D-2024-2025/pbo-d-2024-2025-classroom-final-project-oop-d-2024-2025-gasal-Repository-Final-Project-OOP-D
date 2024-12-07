@@ -7,22 +7,22 @@
     1. [Rahmad Bisma Zulfi Pahlevi - 5025231290]
     2. [Muhammad Abdul Rafi - 5025231093]
     3. [Carmelo Yovan Gratito - 5025231173]
-* **Tech Stack**: [Bahasa Pemrograman, Framework, Tools yang digunakan]
+* **Tech Stack**: [Python, Pygame]
 
 ## 2. Deskripsi Game
-Inspirasi dari Game ROUNDS https://store.steampowered.com/app/1557740/ROUNDS/
+1980s Arcade Game Pacman
 
 ### 2.1 Konsep Game
-* **Genre**: Action, Shooter, Multiplayer, Arcade, Fighting
-* **Gameplay/Rule**: PvP, Against AI, Roguelite
-* **Objective**: Kill The Enemy
-* **Single/Multi Player**: Mungkin Keduanya
+* **Genre**: Arcade
+* **Gameplay/Rule**: Explore the maze and avoid ghost
+* **Objective**: Explore the maze and eat all the food
+* **Single/Multi Player**: Single Player
 
 ### 2.2 Fitur Utama
-1. Item Customization
-2. 2 Player PvP
-3. Controller Support(kalo bisa)
-4. Character Cosmetics
+1. Difficulty Option
+2. Simulation AI Vs AI
+3. Local Account System
+4. Extra Ingame Power-Up Items
 5. Limited Character Customization
 6. Character ability
 
@@ -78,13 +78,13 @@ Inspirasi dari Game ROUNDS https://store.steampowered.com/app/1557740/ROUNDS/
 * **Link Demo Video**: [URL]
 
 ## 6. Panduan Instalasi dan Menjalankan Game
-1. [Langkah 1]
-2. [Langkah 2]
-3. [Langkah n]
+1. 
+2. 
+3. 
 
 ## 7. Kendala dan Solusi
-1. **Kendala 1**:
-    * Solusi:
+1. **Kendala 1**: Keterbatasan skill dan waktu untuk ide awal yang merupakan game 2d shooter berdasarkan game ROUNDS
+    * Solusi: berganti tema ke game arcade
 2. **Kendala 2**:
     * Solusi:
 
