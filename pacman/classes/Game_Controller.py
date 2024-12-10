@@ -46,7 +46,7 @@ class Game_State(Enum):
     PAUSE = auto()
     GAME_OVER = auto()
     WIN = auto()
-    pass
+    
 
 class Game:
     def load_image(file_name):
@@ -55,6 +55,9 @@ class Game:
     def __init__(self, screen, user):
         self.screen = screen
         self.user=user
+        self.score=0
+        self.life=3
+        
         self.tile_size = TILE_SIZE
         self.maze_layout = None
         self.maze_graph = None
@@ -64,7 +67,7 @@ class Game:
         
         self.Player=None
         self.Ghost=[]
-        self.Food_Pellets=None
+        self.Food_Pellets=[]
         self.Fruit=None
         
         # self.player_x = 1  # Initial player position (tile coordinates)
@@ -124,7 +127,9 @@ class Game:
                 self.Ghost.append(Entity.Dumb_Ghost(self.screen))
                 self.Ghost[i].set_maze(self.maze_layout, self.maze_graph)
                 self.Ghost[i].set_graph(Lv.Graph())
-                self.Ghost[i].set_pos
+                self.Ghost[i].set_pos()
+                
+        
         # self.Ghost=Entity.Dumb_Ghost(self.screen)
         # print(self.Ghost.cur_x, self.Ghost.cur_y)
         # print(self.Player.xpos, self.Player.ypos)

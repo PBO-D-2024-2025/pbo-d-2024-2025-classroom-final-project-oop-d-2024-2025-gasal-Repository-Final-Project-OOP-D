@@ -55,6 +55,11 @@ class Game:
     def __init__(self, screen, user):
         self.screen = screen
         self.user=user
+        
+        self.font = pygame.font.SysFont('Minecraft', 20)
+        self.score=0
+        self.life=3
+        
         self.tile_size = TILE_SIZE
         self.maze_layout = None
         self.maze_graph = None
@@ -64,12 +69,8 @@ class Game:
         
         self.Player=None
         self.Ghost=[]
-        self.Food_Pellets=None
+        self.Food_Pellets=[]
         self.Fruit=None
-        
-        # self.player_x = 1  # Initial player position (tile coordinates)
-        # self.player_y = 1
-        # self.food_pellets = self.initialize_food_pellets()
         
         self.wall_image = Game.load_image('wall-nub.gif')
         self.ready_image = Game.load_image('ready.gif')
@@ -89,6 +90,21 @@ class Game:
     def set_fruit(self, fruit):
         # self.Fruit=fruit
         pass
+    
+    def draw_text(self, text, position, color=(255, 255, 255), outline_color=(0, 0, 0)):
+        text_surface = self.font.render(text, True, color)
+        text_surface = self.font.render(text, True, color)
+        outline_surface = self.font.render(text, True, outline_color)
+        
+        # Draw outline
+        x, y = position
+        self.screen.blit(outline_surface, (x - 1, y - 1))
+        self.screen.blit(outline_surface, (x + 1, y - 1))
+        self.screen.blit(outline_surface, (x - 1, y + 1))
+        self.screen.blit(outline_surface, (x + 1, y + 1))
+        
+        # Draw main text
+        self.screen.blit(text_surface, position)
         
     def initialize_game(self, level_data=None, Player=None):
         self.maze_width=level_data['size'][0]*self.tile_size
@@ -119,87 +135,31 @@ class Game:
                 self.Ghost[i].set_maze(self.maze_layout, self.maze_graph)
                 self.Ghost[i].set_graph(Lv.Graph())
                 self.Ghost[i].set_pos()
-        elif level_data['difficulty'] == Lv.Difficulty.EXTREME:
+        elif level_data['difficulty'] == Lv.Difficulty.SUPER_HARD:
             for i in range(8):
                 self.Ghost.append(Entity.Dumb_Ghost(self.screen))
                 self.Ghost[i].set_maze(self.maze_layout, self.maze_graph)
                 self.Ghost[i].set_graph(Lv.Graph())
-                self.Ghost[i].set_pos
-        # self.Ghost=Entity.Dumb_Ghost(self.screen)
-        # print(self.Ghost.cur_x, self.Ghost.cur_y)
-        # print(self.Player.xpos, self.Player.ypos)
-        # print(self.Player.xpos, self.Player.ypos)
-        # self.ghosts = [Entity.Ghost(i) for i in range(4)]
-        # self.level = Level.Level()
-        # self.scoreboard = Scoreboard.Scoreboard()
-        # self.achievement = Achievement.Achievement()
-        # self.database = Database.Database()
-        # self.account = Account.Account()
-        # self.error = Error.Error()
-        # self.game_state = Game_State.MAIN_MENU
-        # self.user_interface = User_Interface.User_Interface()
-        # self.object = Object.Object()
-        # self.smart_move_screen = SmartMoveScreen(screen, tile_size, maze_layout)
-        # self.level = Level.Level()
-        # self.graph = Level.Graph()
-
-    # def initialize_food_pellets(self):
-    #     food_pellets = []
-    #     for y, row in enumerate(self.maze_layout):
-    #         for x, tile in enumerate(row):
-    #             if tile == ' ':
-    #                 food_pellets.append((x, y))
-    #     return food_pellets
-
-    # def draw_maze(self):
-    #     for y, row in enumerate(self.maze_layout):
-    #         for x, tile in enumerate(row):
-    #             if tile == '#':
-    #                 self.screen.blit(self.wall_image, (x * self.tile_size + self.offset_x, y * self.tile_size + self.offset_y))
-    
+                self.Ghost[i].set_pos()
+        
+        for i,node in enumerate(self.maze_graph.keys()):
+            self.Food_Pellets.append(Object.Pellet_Food(self.screen, int(node.split(',')[1]), int(node.split(',')[0])))
+        # for y, row in enumerate(self.maze_layout):
+        #     for x, tile in enumerate(row):
+        #         if tile == ' ': 
+        #     # print(node)
+        #             self.Food_Pellets.append(Object.Pellet_Food(self.screen,x, y))
+        
     def draw_maze(self):
         for y, row in enumerate(self.maze_layout):
             for x, tile in enumerate(row):
                 if tile == '#':
                     self.screen.blit(self.wall_image, (x * self.tile_size, y * self.tile_size))
 
-    # def draw_food_pellets(self):
-        # food_color = (255, 255, 0)  # Yellow color for food pellets
-        # for pellet in self.food_pellets:
-        #     pellet_rect = pygame.Rect(
-        #         pellet[0] * self.tile_size + self.offset_x + self.tile_size // 4,
-        #         pellet[1] * self.tile_size + self.offset_y + self.tile_size // 4,
-        #         self.tile_size // 2,
-        #         self.tile_size // 2
-        #     )
-        #     pygame.draw.rect(self.screen, food_color, pellet_rect)
-
-    # def draw_player(self):
-    #     player_color = (255, 0, 0)  # Red color for the player
-    #     player_rect = pygame.Rect(
-    #         self.player_x * self.tile_size + self.offset_x,
-    #         self.player_y * self.tile_size + self.offset_y,
-    #         self.tile_size,
-    #         self.tile_size
-    #     )
-    #     pygame.draw.rect(self.screen, player_color, player_rect)
-
-    # def move_player(self, dx, dy):
-    #     new_x = self.player_x + dx
-    #     new_y = self.player_y + dy
-    #     if self.maze_layout[new_y][new_x] != '#':  # Check if the new position is not a wall
-    #         self.player_x = new_x
-    #         self.player_y = new_y
-            # self.check_food_collision()
-
-    # def check_food_collision(self):
-    #     if (self.player_x, self.player_y) in self.food_pellets:
-    #         self.food_pellets.remove((self.player_x, self.player_y))
-
     def update_offsets(self):
         # Calculate the offsets to center the maze
-        maze_width = len(self.maze_layout[0]) * TILE_SIZE
-        maze_height = len(self.maze_layout) * TILE_SIZE
+        maze_width = (len(self.maze_layout[0]) * TILE_SIZE)
+        maze_height = (len(self.maze_layout) * TILE_SIZE)
 
         # Calculate the offsets to center the maze on the screen
         self.offset_x = 0#(SCREEN_WIDTH - maze_width) // 2
@@ -211,10 +171,19 @@ class Game:
         self.screen.fill(BLACK)
         self.update_offsets()
         current_time=time.time()
-        
         self.draw_maze()
+        self.draw_text(f'Lives: {self.life}', (5, self.screen.get_height() - 50),(255,255,255))
+        self.draw_text(f'Score: {self.score}', (10, self.screen.get_height() - 25),(255,255,255))
+        
+        for food in self.Food_Pellets:
+            if food.check_collision(self.Player):
+                self.score+=food.get_score()
+                self.Food_Pellets.remove(food)
+                continue
+            food.draw()
         for setan in self.Ghost:
             setan.control(current_time)
+        print(len(self.Food_Pellets))
         # self.Ghost.control(current_time)
         keys=pygame.key.get_pressed()
         self.Player.move(keys, self.offset_x, self.offset_y)

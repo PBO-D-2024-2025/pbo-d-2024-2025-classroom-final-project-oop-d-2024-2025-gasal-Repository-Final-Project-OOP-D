@@ -5,6 +5,7 @@ This file contains the classes for the objects in the game.
 """
 
 from Game_Controller import *
+TILE_SIZE = 20
 
 # =============================================================================
 # Abstract
@@ -18,20 +19,28 @@ class object_food:
 # =============================================================================
 # Child
 class Pellet_Food(object_food):
-    def __init__(self):
+    def __init__(self,screen, x, y):
         self.score = 100
-        self.xpos = 0
-        self.ypos = 0
+        self.screen = screen 
+        self.x = x *TILE_SIZE+TILE_SIZE//2
+        self.y = y *TILE_SIZE+TILE_SIZE//2
+        self.radius = 2
+        # print(x, y)
         
     def set_pos(self, x, y):
-        pass
+        self.x = x
+        self.y = y
     
     def draw(self):
-        food_color = (255, 255, 0)
-        pygame.draw.circle(screen, food_color, (self.x, self.y), self.radius)
+        food_color = (255, 255, 0)  # Yellow color for food pellets
+        pygame.draw.circle(self.screen, food_color, (self.x, self.y), self.radius)
     
-    def check_collision(self):
-        pass
+    def get_score(self):
+        return self.score
+    
+    def check_collision(self,player):
+        distance = ((self.x - player.xpos) ** 2 + (self.y - player.ypos) ** 2) ** 0.5
+        return distance < (self.radius + 12)
 
 class Strawberry_Food(object_food):
     # extra score 1500
