@@ -708,7 +708,7 @@ if __name__ == "__main__":
 
 ## 5. Screenshot dan Demo
 
-- **Screenshot 1**: [Deskripsi]
+- ![didalam game](screenshot1.png): [Didalam Game]
 - **Screenshot 2**: [Deskripsi]
 - **Link Demo Video**: [URL]
 
@@ -728,6 +728,10 @@ if __name__ == "__main__":
    - Solusi: Belum ada
 4. **Kendala 4**: Permasalaahan Tampilan layar yang sulit(implementasi smart screen movement)
    - Solusi: Belum ada
+5. **Kendala 4**: Pembuatan User Interface di Pygame tidak mudah
+   - Solusi: Belum Selesai
+6. **Kendala 4**: Pembuatan Kode untuk behavior ghost yang sulit
+   - Solusi: Mengurangi tipe ghost yang akan diimplementasikan
 
 ## 8. Kesimpulan dan Pembelajaran
 
