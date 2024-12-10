@@ -90,4 +90,4 @@ referensi repo https://github.com/greyblue9/pacman-python
 
 ## 8. Kesimpulan dan Pembelajaran
 * **Kesimpulan**:
-* **Pembelajaran**:
+* **Pembelajaran**: 

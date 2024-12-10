@@ -165,7 +165,7 @@ class Player:
             self.vely = 0
 
     def is_valid_move(self, x, y, offset_x=0, offset_y=0):
-        tile_x = (x + TILE_SIZE // 2) // TILE_SIZE
+        tile_x = (x + TILE_SIZE // 2) // TILE_SIZE 
         tile_y = (y + TILE_SIZE // 2) // TILE_SIZE
 
         # Check if the tile is within the maze boundaries and not a wall
