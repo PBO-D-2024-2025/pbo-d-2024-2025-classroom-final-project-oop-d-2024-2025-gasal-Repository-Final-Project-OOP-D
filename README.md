@@ -10,7 +10,7 @@
 * **Tech Stack**: [Bahasa Pemrograman, Framework, Tools yang digunakan]
 
 ## 2. Deskripsi Game
-Inspirasi dari Game ROUNDS https://store.steampowered.com/app/1557740/ROUNDS/
+referensi repo https://github.com/greyblue9/pacman-python
 
 ### 2.1 Konsep Game
 * **Genre**: Action, Shooter, Multiplayer, Arcade, Fighting
