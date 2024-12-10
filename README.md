@@ -7,16 +7,16 @@
     1. [Rahmad Bisma Zulfi Pahlevi - 5025231290]
     2. [Muhammad Abdul Rafi - 5025231093]
     3. [Carmelo Yovan Gratito - 5025231173]
-* **Tech Stack**: [Bahasa Pemrograman, Framework, Tools yang digunakan]
+* **Tech Stack**: [Python, Pygame]
 
 ## 2. Deskripsi Game
 referensi repo https://github.com/greyblue9/pacman-python
 
 ### 2.1 Konsep Game
-* **Genre**: Action, Shooter, Multiplayer, Arcade, Fighting
-* **Gameplay/Rule**: PvP, Against AI, Roguelite
-* **Objective**: Kill The Enemy
-* **Single/Multi Player**: Mungkin Keduanya
+* **Genre**: Arcade
+* **Gameplay/Rule**: Explore the maze and avoid ghost
+* **Objective**: Explore the maze and eat all the food
+* **Single/Multi Player**: Single Player
 
 ### 2.2 Fitur Utama
 1. Item Customization
@@ -78,13 +78,13 @@ referensi repo https://github.com/greyblue9/pacman-python
 * **Link Demo Video**: [URL]
 
 ## 6. Panduan Instalasi dan Menjalankan Game
-1. [Langkah 1]
-2. [Langkah 2]
-3. [Langkah n]
+1. 
+2. 
+3. 
 
 ## 7. Kendala dan Solusi
-1. **Kendala 1**:
-    * Solusi:
+1. **Kendala 1**: Keterbatasan skill dan waktu untuk ide awal yang merupakan game 2d shooter berdasarkan game ROUNDS
+    * Solusi: berganti tema ke game arcade
 2. **Kendala 2**:
     * Solusi:
 
